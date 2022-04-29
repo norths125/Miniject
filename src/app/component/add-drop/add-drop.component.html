@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="header">เพิ่ม-ถอนวิชาเรียน</div>
+    <div class="main">
+      <table class="table table-secondary table-striped table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">รหัสวิชา-ชื่อวิชา</th>
+            <th scope="col">หน่วยกิต</th>
+            <th scope="col">ตอนเรียน-เวลาเรียน</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">0406-วิชาที่1</th>
+            <td>3(3-0)</td>
+            <td class="section">
+              S1 M 9.00-12.00
+            </td>
+  
+          </tr>
+          <tr>
+            <th scope="row">0407-วิชาที่2</th>
+            <td>3(3-0)</td>
+            <td class="section">
+              S1 T 9.00-12.00
+            </td>
+  
+          </tr>
+          <tr>
+            <th scope="row">0408-วิชาที่3</th>
+            <td>3(3-0)</td>
+            <td class="section">
+              S1 W 9.00-12.00
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <div>
+        <p id="option">
+          <label><input type="checkbox"><span>เพิ่มวิชาเรียน</span></label>
+          <label><input type="checkbox"><span>ถอนวิชาเรียน</span></label>
+        </p>
+        <div class="input-field">
+          <input type="text" class="form-control" placeholder="รหัสวิชา">
+          <input type="text" class="form-control" placeholder="ตอนเรียน">
+        </div>
+        <div class="input-field">
+          <input type="text" class="form-control" placeholder="รหัสวิชา">
+          <input type="text" class="form-control" placeholder="ตอนเรียน">
+        </div>
+        <div class="input-field">
+          <input type="text" class="form-control" placeholder="รหัสวิชา">
+          <input type="text" class="form-control" placeholder="ตอนเรียน">
+        </div>
+      <div class="button">
+        <div class="submitbtn">
+          <button type="button" class="btn btn-success" (click)="submit()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>  
