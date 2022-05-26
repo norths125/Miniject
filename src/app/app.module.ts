@@ -9,6 +9,15 @@ import { RegistrationResultComponent } from './component/registration-result/reg
 import { RegisterSubmitComponent } from './component/register-submit/register-submit.component';
 import { AddDropComponent } from './component/add-drop/add-drop.component';
 import { ChangComponent } from './component/chang/chang.component';
+import { UserLoginComponent } from './component/user-auth/login/userlogin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './angular-material.module';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserRegisterComponent } from './component/user-auth/register/user-register.component';
+import { DashboardComponent } from './component/main-sidenav/dashboard/dashboard.component';
+import { ProfileComponent } from './component/main-sidenav/profile/profile.component'
 
 @NgModule({
   declarations: [
@@ -18,13 +27,24 @@ import { ChangComponent } from './component/chang/chang.component';
     RegistrationResultComponent,
     RegisterSubmitComponent,
     AddDropComponent,
-    ChangComponent
+    ChangComponent,
+    UserLoginComponent,
+    UserRegisterComponent,
+    DashboardComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    AngularMaterialModule,
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule,
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule {}
