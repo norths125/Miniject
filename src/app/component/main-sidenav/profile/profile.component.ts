@@ -1,13 +1,12 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
-
 @Component({
-  selector: 'app-registration-result',
-  templateUrl: './registration-result.component.html',
-  styleUrls: ['./registration-result.component.css']
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css']
 })
-export class RegistrationResultComponent implements OnInit {
+export class ProfileComponent implements OnInit {
   isActive: boolean = false;
 
   constructor(private router: Router){

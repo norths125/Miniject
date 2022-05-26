@@ -1,66 +1,120 @@
-<div class="container">
-    <div class="header">ผลการลงทะเบียน</div>
-    <div class="main">
-      <h5 style="margin-left: auto;">สรุปรายวิชาที่ลงทะเบียน</h5>
-      <table class="table table-secondary table-striped table-bordered table-hover mt-4">
-        <thead>
-          <tr>
-            <th scope="column">รหัสวิชา-ชื่อวิชา</th>
-            <th scope="column">หน่วยกิต</th>
-            <th scope="column">ตอนเรียน-เวลาเรียน</th>
-            <th scope="column">สถานะ</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">0406-วิชาที่1</th>
-            <td>3(3-0)</td>
-            <td class="section">
-              S1 M 9.00-12.00
-            </td>
-            <td>P</td>
-          </tr>
-          <tr>
-            <th scope="row">0407-วิชาที่2</th>
-            <td>3(3-0)</td>
-            <td class="section">
-              S1 T 9.00-12.00
-            </td>
-            <td>P</td>
-          </tr>
-          <tr>
-            <th scope="row">0408-วิชาที่3</th>
-            <td>3(3-0)</td>
-            <td class="section">
-              S1 W 9.00-12.00
-            </td>
-            <td>P</td>
-          </tr>
-        </tbody>
-      </table>
-      <h5 style="margin-left: auto;">ผลการลงทะเบียน</h5>
-      <table class="table table-secondary table-striped table-bordered mt-4">
-        <thead>
-          <tr>
-            <th>ครั้งที่</th>
-            <th>วันที่</th>
-            <th>ประเภท</th>
-            <th>วิชา</th>
-            <th>สถานะ</th>
-            <th>ใบเสร็จ</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-        </tbody>
-      </table>
-  
+<!-- Toolbar -->
+<mat-toolbar color="primary" class="app-header">
+  <div><a href="#" routerLink="../homepage"  class="positronx">Class Register System</a></div>
+  <span class="nav-tool-items">
+    <a class="login-btn" mat-button routerLink="../login" routerLinkActive="isActive">Log in</a>
+    <a class="register-btn" mat-button mat-raised-button routerLink="../register" routerLinkActive="isActive">Register</a>
+  </span>
+</mat-toolbar>
+<!-- Toolbar -->
+<mat-toolbar color="primary" class="header">
+  <div>Material Theme</div>
+  <span class="nav-tool-items">
+    <mat-icon (click)="sidenav.toggle()" class="hamburger">menu</mat-icon>
+  </span>
+</mat-toolbar>
+<mat-sidenav-container>
+  <!-- Sidenav -->
+  <mat-sidenav #sidenav [mode]="isBiggerScreen() ? 'over' : 'side'" [(opened)]="opened" [fixedInViewport]="true"
+    [fixedTopGap]>
+    <mat-nav-list>
+      <a routerLink="../homepage" mat-list-item >
+        <mat-icon>dashboard</mat-icon> Dashboard
+      </a>
+      <a routerLink="../profile" mat-list-item>
+        <mat-icon>person</mat-icon> โปรไฟล์
+      </a>
+      <a routerLink="../register-class" mat-list-item>
+        <mat-icon>content_paste</mat-icon> ลงทะเบียนวิชาเรียน
+      </a>
+      <a routerLink="../registration-result" mat-list-item>
+        <mat-icon>library_books</mat-icon> วิชาที่ลงทะเบียน
+      </a>
+      <a routerLink="../drop-class" mat-list-item>
+        <mat-icon>history</mat-icon> ถอนวิชาเรียน
+      </a>
+      <a mat-list-item>
+        <mat-icon>calendar_today</mat-icon> Calendar
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <!-- Main content -->
+
+<mat-sidenav-content>
+  <!-- Applying the mat-tyography class adds styles for native elements. -->
+  <section class="mat-typography title-group">
+    <mat-divider></mat-divider>
+  </section>
+  <!-- Angular material cards -->
+  <div class="productCards">
+    <div class="container">
+      <div class="header">ผลการลงทะเบียน</div>
+      <div class="main">
+        <h5 style="margin-left: auto;">สรุปรายวิชาที่ลงทะเบียน</h5>
+        <table class="table table-secondary table-striped table-bordered table-hover mt-4">
+          <thead>
+            <tr>
+              <th scope="column">รหัสวิชา-ชื่อวิชา</th>
+              <th scope="column">หน่วยกิต</th>
+              <th scope="column">ตอนเรียน-เวลาเรียน</th>
+              <th scope="column">สถานะ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">0406-วิชาที่1</th>
+              <td>3(3-0)</td>
+              <td class="section">
+                S1 M 9.00-12.00
+              </td>
+              <td>P</td>
+            </tr>
+            <tr>
+              <th scope="row">0407-วิชาที่2</th>
+              <td>3(3-0)</td>
+              <td class="section">
+                S1 T 9.00-12.00
+              </td>
+              <td>P</td>
+            </tr>
+            <tr>
+              <th scope="row">0408-วิชาที่3</th>
+              <td>3(3-0)</td>
+              <td class="section">
+                S1 W 9.00-12.00
+              </td>
+              <td>P</td>
+            </tr>
+          </tbody>
+        </table>
+        <h5 style="margin-left: auto;">ผลการลงทะเบียน</h5>
+        <table class="table table-secondary table-striped table-bordered mt-4">
+          <thead>
+            <tr>
+              <th>ครั้งที่</th>
+              <th>วันที่</th>
+              <th>ประเภท</th>
+              <th>วิชา</th>
+              <th>สถานะ</th>
+              <th>ใบเสร็จ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-  </div>  
+</div>
+</mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
